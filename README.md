@@ -16,7 +16,7 @@ Understanding customer sentiments is crucial for businesses to improve products 
 
 ## Usage
 
-1. **Data Preparation**: Ensure your dataset (`product_reviews.csv`) contains reviews and corresponding ratings.
+1. **Data Preparation**: Ensure your dataset (`data.csv`) contains reviews and corresponding ratings.
 2. **Dependencies**: Install necessary dependencies using `pip install -r requirements.txt`.
 3. **Training**: Run `train_model.py` to preprocess data, train the model, and evaluate its performance.
 4. **Prediction**: Use the `predict_review(review)` function in `predict.py` to predict sentiment for new reviews.
