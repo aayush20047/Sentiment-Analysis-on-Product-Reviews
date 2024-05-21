@@ -1,30 +1,42 @@
-Project Overview: Sentiment Analysis on Product Reviews
+# Product Review Sentiment Analysis
 
-This project aims to build a sentiment analysis model that can classify product reviews as either positive or negative. The analysis uses Natural Language Processing (NLP) techniques to preprocess the text data, transform it into numerical features, and apply a machine learning algorithm for classification. The ultimate goal is to provide an automated way to assess customer feedback, which can be beneficial for businesses to understand their customers better.
-Steps Involved
+This project automates sentiment analysis of product reviews, classifying them into positive or negative sentiments. Leveraging NLP techniques and ML algorithms, it provides businesses with insights into customer feedback.
 
-    Data Import and Labeling:
-        The dataset (product_reviews.csv) is loaded into a Pandas DataFrame.
-        Reviews with ratings less than 3 are labeled as negative (0), and those with ratings 3 or higher are labeled as positive (1).
+## Overview
 
-    Text Preprocessing:
-        The preprocess_text function cleans the reviews by removing special characters, extra spaces, and converting text to lowercase.
-        Stop words are removed to reduce noise in the data.
-        Tokenization is performed to break down sentences into individual words.
+Understanding customer sentiments is crucial for businesses to improve products and services. This project streamlines the sentiment analysis process, allowing businesses to efficiently analyze large volumes of product reviews.
 
-    Feature Extraction:
-        TF-IDF (Term Frequency-Inverse Document Frequency) Vectorizer is used to transform the processed text data into numerical features suitable for machine learning algorithms.
-        A maximum of 2500 features are extracted to represent the text data efficiently.
+## Key Features
 
-    Model Training and Evaluation:
-        The dataset is split into training and test sets with a 67%-33% ratio, ensuring the class distribution is maintained using stratification.
-        A Decision Tree Classifier is trained on the training set.
-        The model's performance is evaluated using the accuracy score on the training set, and the confusion matrix is displayed for better understanding of the classification results.
+- **Data Preprocessing**: Cleansing, tokenization, and removal of stopwords ensure quality input for analysis.
+- **Feature Extraction**: TF-IDF vectorization captures word importance and enables effective model training.
+- **Model Training**: Decision Tree Classifier learns patterns in the text data for sentiment prediction.
+- **Evaluation**: Accuracy score and confusion matrix visualization assess model performance.
+- **Prediction**: A function predicts sentiment for new reviews, facilitating real-time analysis.
 
-    Prediction on New Reviews:
-        A function predict_review is created to preprocess, vectorize, and predict the sentiment of new reviews using the trained model.
-        Example: The review "This product is bad, I hate it!" is predicted as negative.
+## Usage
 
-Visualization
+1. **Data Preparation**: Ensure your dataset (`product_reviews.csv`) contains reviews and corresponding ratings.
+2. **Dependencies**: Install necessary dependencies using `pip install -r requirements.txt`.
+3. **Training**: Run `train_model.py` to preprocess data, train the model, and evaluate its performance.
+4. **Prediction**: Use the `predict_review(review)` function in `predict.py` to predict sentiment for new reviews.
 
-    A word cloud can be generated to visualize the most frequent words in the reviews, providing insights into common themes and topics.
+## How to Run the Project
+
+To run the project, follow these steps:
+
+1. Ensure you have Python installed on your system.
+2. Clone this repository to your local machine.
+3. Navigate to the project directory.
+4. Install the required dependencies using `pip install -r requirements.txt`.
+5. Prepare your dataset (`product_reviews.csv`) with reviews and corresponding ratings.
+6. Run `train_model.py` to preprocess data, train the model, and evaluate its performance.
+7. Use the `predict_review(review)` function in `predict.py` to predict sentiment for new reviews.
+
+## Example
+
+```python
+from predict import predict_review
+
+new_review = "This product exceeded my expectations! Highly recommended."
+print(f"The sentiment is: {predict_review(new_review)}")
