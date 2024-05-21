@@ -1,7 +1,5 @@
 Project Overview: Sentiment Analysis on Product Reviews
 
-Introduction
-
 This project aims to build a sentiment analysis model that can classify product reviews as either positive or negative. The analysis uses Natural Language Processing (NLP) techniques to preprocess the text data, transform it into numerical features, and apply a machine learning algorithm for classification. The ultimate goal is to provide an automated way to assess customer feedback, which can be beneficial for businesses to understand their customers better.
 Steps Involved
 
